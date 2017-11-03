@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CS 491 - Project 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+
+  <style>
+    body {font-family: "Lato", sans-serif;}
+    
+    /* Style the tab */
+    div.tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+    
+    /* Style the buttons inside the tab */
+    div.tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    
+    /* Change background color of buttons on hover */
+    div.tab button:hover {
+        background-color: #ddd;
+    }
+    
+    /* Create an active/current tablink class */
+    div.tab button.active {
+        background-color: #ccc;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    img {
+      max-width:100%;
+      height:auto;
+      max-height:100%;
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">CS 491</a>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="project2.html">Project 3</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1>CS 491 - Project 3 -- Collaborate</h1>
+      <p></p>
+      <hr>
+      <div class="tab">
+        <button class="tablinks" onclick="openType(event, 'project_description')" id="defaultOpen">Project Description</button>
+        <button class="tablinks" onclick="openType(event, 'development')">Development</button>
+        <button class="tablinks" onclick="openType(event, 'team')">The Team</button>
+        <button class="tablinks" onclick="openType(event, 'resources')">Resources</button>
+      </div>
+
+      <div id="project_description" class="tabcontent">
+        <h3>Project Description</h3>
+        <p style="text-indent :5em;" >    
+          For the third and final project of CS 491 AR/VR at UIC, my goal is to build a unified workspace
+          that I am calling Collaborate.  The idea of the project is that I have worked in many offices 
+          through internships.  In each internship I have been at, I have seen one common problem: 
+          collaboration.  When working with a new company, as an intern, you are bound to have questions 
+          and will need assistance regardless of how independent of a programmer you are.  Most companies 
+          use Slack or some other chat service that is company wide.  As that is great and all, once 
+          you get the attention of the person you are trying to work with, they come over and try and 
+          help.  Then the person has to look through your code with you behind the laptop.  The person 
+          trying to help does not have much control of what happens and s/he just tell's you to scroll 
+          up or down or look for certain things that could be the cause.  This causes a lot of time 
+          to be lost on both sides; you lose time and the s/he loses time.  Here is where Collaborate 
+          comes in to help.
+        </p>
+        <p style="text-indent :5em;" >    
+          Collaborate is going to be using augmented reality technology with the Hololens.  The reason for that is 
+          that in an office space, even when you are wired in, you should still be able to see your 
+          surroundings and be aware of what is happening around you.  With the Hololens, as a user, 
+          one can look around the room and still see all of his/her coworkers.  The virtual reality experience 
+          would not be as good because your vision is blocked. 
+        </p>
+        <p style="text-indent :5em;" >    
+          Collaborate would be used in a method that expediates the process of helping one another in an 
+          office while also respecting the time of both parties.  Using Hololens provided by Microsoft, I 
+          plan to create an office space where everyone is in a Hololens (yes, I am aware that that would 
+          be one expensive endeavour) and they can interact with one another through the Hololens.  So, 
+          as a company, I would have everyone in Hololens, with everyone having their own virtual desktop 
+          that they can work with.  Each desk would have a Hololens, a mouse, and a keyboard.  That 
+          reduces the need for having to carry around laptops or having desktops at each station, it 
+          reduces the need for a presenter at a meeting to bring their laptop or bring their presentation on 
+          a flashdrive or through email.  This allows your virtual workstation to be a transportable area 
+          of work with ease.
+        </p>
+        <p style="text-indent :5em;" >    
+          Collaborate allows ever user to have their own workspace that they can choose how many monitors 
+          to have, what windows to show, what to hide, have some cool knicknacks on their desk.  Collaborate 
+          is to help unclutter the workspace and make it more futureistic.  As of now, the current idea 
+          is to only have a mouse and keybord on every desk because it is currently difficult to emulate 
+          a keyboard when it is not physical.  Whether a mouse is needed or not, is up to the user; the 
+          user can use voice or touch controls or use a physical mouse.
+        </p>
+      </div>
+      <div id="development" class="tabcontent">
+        <h3>Development</h3>
+        <p style="text-indent :5em;" >    
+          For this project, I plan to use Microsoft's Hololens.  The reason, as stated in the description, 
+          is that it allows for awareness of the environment.  With that being said, I will be using Unity 
+          for my development tool because it is the most supported tool when comparing Unity and Unreal Engine.  
+          Unity has a lot of awesome libraries that can be used with Hololens made by Microsoft as well as 
+          various other people who seem to have extensive knowledge in augmented reality development, or at 
+          least understand augmented reality to an extend of being able to create tools for it.  Some other 
+          hardware that I will be using is a physical keyboard and a physical mouse.  Those two are because 
+          it currently seems difficult to emulate a keyboard in a nice, augmented way.  Also, who doesn't 
+          like the clickity clack of a physical keyboard.  The mouse is for a physical way of navigation rather 
+          than an augmented way of navigation within the virtual office.  Aside from those, the main hardware 
+          I will be using is a physical computer to run the program to run Collaborate.  In a perfect world, 
+          I would have some powerhouse computer that can house hundreds of Hololens, but since we don't have 
+          a super powerhouse computer or hundreds of Hololens headsets to test with, I will be using whatever 
+          UIC's EVL has.
+        </p>
+      </div>
+      <div id="team" class="tabcontent">
+        <h3>The Team</h3>
+        <p style="text-indent :5em;" >
+          The team consists of one member: Timothy Choh
+
+          My role will be to develop Collaborate.  I will be making the environment that users can work in as 
+          well as any UI that is needed to be developed.
+
+          The development process will be recorded <a href="">here (Trello board)</a>
+
+          I will start with creating a workspace that is easy to use and easy to navigate.  From there, I will 
+          work on user experience and make sure that the application can be used by anybody that wants to 
+          use it.  After that, I will be working on the centralized anchor to be able to share all the workspaces 
+          in the same space.  *** MORE OF THIS WILL BE BROKEN DOWN AND SHOWN ON THE TRELLO BOARD
+        </p>
+      </div>
+      <div id="resources" class="tabcontent">
+        <h3>Resources</h3>
+        <p style="text-indent :5em;" >
+          Microsoft Package I will be using: 
+          <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity">Github Link to MRTK</a>
+        </p>
+        <p style="text-indent :5em;" >
+          Here's our video to show what we have done: <a href="https://youtu.be/lPPygwq5INk">Video Demo</a>
+        </p>
+      </div>
+      
+      <script>
+        function openType(evt, type) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(type).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Tim Choh, George Poulos, Edmond Zalenski</p>
+</footer>
+</body>
+</html>
